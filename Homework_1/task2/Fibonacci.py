@@ -14,4 +14,3 @@ def check_fibonacci(data: Sequence[int]) -> bool:
         if not data[i] + data[i + 1] == data[i + 2] & data[i + 1] >= data[i]:  # to exclude all the other cases and non-sorted sequences
             return False
     return True
-    
