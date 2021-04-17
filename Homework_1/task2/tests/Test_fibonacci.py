@@ -11,6 +11,6 @@ from Homework_1.task2 import Fibonacci
      ([0, 0, 0, 1],  False),  ((12, 13, 54, 83), False)]  
 )
 def test_fibonacci(test_input: Sequence, expected: bool):
-    actual = check_fibonacci(test_input)
+    actual = Fibonacci.check_fibonacci(test_input)
 
     assert actual == expected
