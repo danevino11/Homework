@@ -17,6 +17,6 @@ def check_sum_of_four(a: List[int], b: List[int], c: List[int], d: List[int]) ->
             for j in b
             for k in c
             for l in d
-            if i + j + k + l == 0
+            if i + j + k + l == 0    # We iterate through given lists to find the length of the resulting tuple
         ]
     )
