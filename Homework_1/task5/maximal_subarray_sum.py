@@ -11,14 +11,13 @@ Examples:
 """
 from typing import List
 
-
 def find_maximal_subarray_sum(nums: List[int], k: int) -> int:
-    nums.sort()
-    last = nums[len(nums)-(k-2)]
-    second_last = nums[len(nums) - (k-1)]
-    third_last = nums[len(nums) - k]
-    if last >= last + second_last:    # in case the third-to-last element is less than/equal to zero
-        return last
-    if last + second_last >= last + second_last + third_last:    # in case the third-to-last and second-to-last elements are less than/equal to zero
-        return last + second_last
-    return  last + second_last + third_last
+    list_of_sums = []
+    for i in range(len(nums)):
+        sub_array = nums[i : i + k]
+        first_sum = sub_array[0]
+        for i in sub_array[1:]:
+            if first_sum < first_sum + i:
+                first_sum = first_sum + i
+            list_of_sums.append(first_sum)
+    return max(list_of_sums)
