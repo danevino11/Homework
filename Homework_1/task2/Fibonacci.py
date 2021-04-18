@@ -9,8 +9,10 @@ We guarantee, that the given sequence contain >= 0 integers inside.
 from typing import Sequence
 
 
-def check_fibonacci(data: Sequence[int]) -> bool:
+def check_fibonacci(data: Sequence) -> bool:
     for i in range(len(data) - 2):
-        if not data[i] + data[i + 1] == data[i + 2] & data[i + 1] >= data[i]:  # to exclude all the other cases and non-sorted sequences
+        if data[i] > data[i + 1]:    # to exclude non-sorted sequences
+            return False
+        if not data[i] + data[i + 1] == data[i + 2]:    # to exclude non-fibonacci sequences     
             return False
     return True
