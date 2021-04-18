@@ -17,4 +17,10 @@ from typing import Tuple
 
 
 def find_maximum_and_minimum(file_name: str) -> Tuple[int, int]:
-    ...
+    list_of_v = []    #     
+    with open(file_name) as fi:
+        for line in fi:
+            list_of_v.append(int((line.strip("\n"))))    # creates a line-by-line list of values
+            list_of_v.sort()    # sorts the list
+    return list_of_v[0], list_of_v[-1]    # takes first and last element of a sorted list to create a tuple
+        
