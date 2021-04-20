@@ -6,8 +6,6 @@ import pytest
 
 from Homework_1.task3 import find_min_and_max
 
-print(os.path.dirname(__file__))
-
 
 @pytest.mark.parametrize(
     "file_name, expected",
