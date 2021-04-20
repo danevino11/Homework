@@ -13,6 +13,6 @@ def check_fibonacci(data: Sequence) -> bool:
     for i in range(len(data) - 2):
         if data[i] > data[i + 1]:    # to exclude non-sorted sequences
             return False
-        if not data[i] + data[i + 1] == data[i + 2]:    # to exclude non-fibonacci sequences     
+        if data[i] + data[i + 1] != data[i + 2]:    # to exclude non-fibonacci sequences     
             return False
     return True
