@@ -10,7 +10,7 @@ from Homework_1.task5 import maximal_subarray_sum
     
     [
     ([-5, -4, 3, 4], 3, 7), 
-    ([-4, -5, -2, -3, 2], 4, 2),
+    ([-4, -5, -2, -3, 2], 4, 2),        # tests all the possible cases
     ([0, 0, 0, 0, 0], 4, 0)
     ([1, -2, -6, -3, 1], 2, 2) 
     ]  
