@@ -10,13 +10,17 @@ from typing import List
 
 
 def check_sum_of_four(a: List[int], b: List[int], c: List[int], d: List[int]) -> int:
-    return len(
-        [
-            i + j + k + l
-            for i in a
-            for j in b
-            for k in c
-            for l in d
-            if i + j + k + l == 0    # We iterate through given lists to find the length of the resulting tuple
-        ]
-    )
+        number_of_tuples = 0
+        dict_of_tuples = {}
+        for i in a:
+            for j in b:
+                sums = i + j
+                dict_of_tuples[sums] = dict_of_tuples.get(sums, 0) + 1
+                print(dict_of_tuples)
+        
+        for k in c:
+            for l in d:
+                sums = k + l
+                if -sums in dict_of_tuples:
+                    number_of_tuples += dict_of_tuples[-sums]      
+        return number_of_tuples
