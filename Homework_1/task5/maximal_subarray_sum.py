@@ -12,7 +12,7 @@ from typing import List
 def find_maximal_subarray_sum(nums: List[int], k: int) -> int:
     list_of_sums = []
     for i in range(len(nums)):
-        sub_array = nums[i:i + k]
+        sub_array = nums[i : i + k]
         first_sum = sub_array[0]    
         for j in sub_array[1:]:
             if first_sum < first_sum + j:
