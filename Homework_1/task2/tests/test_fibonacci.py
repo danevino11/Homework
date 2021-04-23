@@ -2,7 +2,7 @@ from typing import Sequence
 
 import pytest
 
-from Homework_1.task2 import Fibonacci
+from Homework_1.task2 import fibonacci
 
 
 @pytest.mark.parametrize(
@@ -11,6 +11,6 @@ from Homework_1.task2 import Fibonacci
      ([0, 0, 0, 1],  False),  ((12, 13, 54, 83), False)]  
 )
 def test_fibonacci(test_input: Sequence, expected: bool):
-    actual = Fibonacci.check_fibonacci(test_input)
+    actual = fibonacci.check_fibonacci(test_input)
 
     assert actual == expected
