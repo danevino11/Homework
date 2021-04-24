@@ -6,11 +6,23 @@ Given a file containing text. Complete using only default collections:
     4) Count every non ascii char
     5) Find most common non ascii char for document
 """
+import os
+import tokenize
 from typing import List
 
 
 def get_longest_diverse_words(file_path: str) -> List[str]:
-    ...
+    words = []
+    with open(file_name) as fi:
+        tokens = tokenize.generate_tokens(fi.readline)
+        for token in tokens:
+            if token.type == 1:
+                words.append([token.string, len(set(token.string))])
+    words.sort(key=lambda x: x[1], reverse=True)
+    result = []
+    for i in range(10):
+        result.append(words[i][0])
+    return result
 
 
 def get_rarest_char(file_path: str) -> str:
