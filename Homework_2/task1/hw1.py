@@ -8,12 +8,13 @@ Given a file containing text. Complete using only default collections:
 """
 import os
 import tokenize
+from string import punctuation
 from typing import List
 
 
 def get_longest_diverse_words(file_path: str) -> List[str]:
     words = []
-    with open(file_name) as fi:
+    with open(file_path) as fi:
         tokens = tokenize.generate_tokens(fi.readline)
         for token in tokens:
             if token.type == 1:
@@ -26,16 +27,45 @@ def get_longest_diverse_words(file_path: str) -> List[str]:
 
 
 def get_rarest_char(file_path: str) -> str:
-    ...
+    char = {}
+    with open(file_path) as fi:
+        for line in fi:
+            for i in line:
+                if i not in char:
+                    char[i] = 1
+                else:
+                    char[i] += 1
+    return min(char, key=char.get)
 
 
 def count_punctuation_chars(file_path: str) -> int:
-    ...
+    count = 0
+    with open(file_path) as fi:
+        for line in fi:
+            for i in line:
+                if i in punctuation:
+                    count += 1
+    return count
 
 
 def count_non_ascii_chars(file_path: str) -> int:
-    ...
+    count = 0
+    with open(file_path) as fi:
+        for line in fi:
+            for i in line:
+                if not i.isascii():
+                    count += 1
+    return count
 
 
 def get_most_common_non_ascii_char(file_path: str) -> str:
-    ...
+    char = {}
+    with open(file_path) as fi:
+        for line in fi:
+            for i in line:
+                if not i.isascii():
+                    if i not in char:
+                        char[i] = 1
+                    else:
+                        char[i] += 1
+    return max(char, key=char.get)
