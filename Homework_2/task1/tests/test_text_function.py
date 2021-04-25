@@ -4,14 +4,7 @@ from typing import List
 
 import pytest  
 
-from Homework_2.task1 import (
-    get_longest_diverse_words,
-    get_rarest_char,
-    count_punctuation_chars,
-    count_non_ascii_chars,
-    get_most_common_non_ascii_char,
-    
-)
+from Homework_2.task1 import text_functions
  
 
 @pytest.mark.parametrize(
@@ -35,7 +28,7 @@ from Homework_2.task1 import (
     ]
 )
 def test_get_longest_diverse_words(file_name: str, expected: List[str]):
-    assert get_longest_diverse_words(file_name) == expected
+    assert text_functions.get_longest_diverse_words(file_name) == expected
     
     
 @pytest.mark.parametrize(
@@ -47,7 +40,7 @@ def test_get_longest_diverse_words(file_name: str, expected: List[str]):
     ],
 )
 def test_get_rarest_char(file_name: str, expected: str):
-    assert get_rarest_char(file_name) == expected   
+    assert text_functions.get_rarest_char(file_name) == expected   
     
     
 @pytest.mark.parametrize(
@@ -59,7 +52,7 @@ def test_get_rarest_char(file_name: str, expected: str):
     ],
 )
 def test_count_punctuation_chars(file_name: str, expected: int):
-    assert count_punctuation_chars(file_name) == expected   
+    assert text_functions.count_punctuation_chars(file_name) == expected   
     
     
 @pytest.mark.parametrize(
@@ -71,7 +64,7 @@ def test_count_punctuation_chars(file_name: str, expected: int):
     ],
 )
 def test_count_non_ascii_chars(file_name: str, expected: int):
-    assert count_non_ascii_chars(file_name) == expected       
+    assert text_functions.count_non_ascii_chars(file_name) == expected       
     
     
 @pytest.mark.parametrize(
@@ -83,5 +76,5 @@ def test_count_non_ascii_chars(file_name: str, expected: int):
     ],
 )
 def test_get_most_common_non_ascii_char(file_name: str, expected: str):
-    assert get_most_common_non_ascii_char(file_name) == expected
+    assert text_functions.get_most_common_non_ascii_char(file_name) == expected
     
