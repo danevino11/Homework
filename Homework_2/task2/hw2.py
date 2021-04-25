@@ -21,4 +21,13 @@ from typing import List, Tuple
 
 
 def major_and_minor_elem(inp: List) -> Tuple[int, int]:
-    ...
+    values = {}
+    for i in inp:
+        if i not in values:
+            values[i] = 1
+        else:
+            values[i] += 1
+    major = max(values, key=values.get)
+    minor = min(values, key=values.get)
+    if values[major] > (len(inp) / 2) and major > minor:
+        return major, minor
