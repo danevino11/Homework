@@ -19,8 +19,8 @@ assert = custom_range(string.ascii_lowercase, 'p', 'g', -2) == ['p', 'n', 'l', '
 def custom_range(sequence, start=None, finish=None, step=1):
     first = None
     last = None
-    values = []
     num = 0
+    values = []
     for i in sequence:
         if i == start:
             first = num
