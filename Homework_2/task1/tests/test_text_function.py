@@ -13,16 +13,16 @@ from Homework_2.task1 import text_functions
         [
             os.path.join(os.path.dirname(__file__), "test_1.txt"), 
             [
-                'yghrfbhavjnbajtbnisbn', 
-                'wgiunibuth54uhgt', 
-                'kmvjdjkvcckhsfdih', 
-                'brbisuhbiufgnbfgbfnfgn', 
-                'bbgfieooutr', 
-                'ghbnghtbsrngdssbrtbfgb', 
-                'bstiubsbiujrs', 
-                'aiousbj', 
-                'bgbsfnbjgsngbgfbsdbsgbsgbsgb', 
-                'gbsbbsibnsliu'
+                "yghrfbhavjnbajtbnisbn", 
+                "wgiunibuth54uhgt", 
+                "kmvjdjkvcckhsfdih", 
+                "brbisuhbiufgnbfgbfnfgn", 
+                "bbgfieooutr", 
+                "ghbnghtbsrngdssbrtbfgb", 
+                "bstiubsbiujrs", 
+                "aiousbj", 
+                "bgbsfnbjgsngbgfbsdbsgbsgbsgb", 
+                "gbsbbsibnsliu"
             ],         
         ],
     ]
