@@ -23,5 +23,5 @@ from Homework_2.task3 import all_possible_lists
         ),
     ],
 )
-def test_combinations(args: List, expected: List[Any]):
-    assert all_possible_lists.combinations(args) == expected
+def test_combinations(*args: List, expected: List[Any]):
+    assert all_possible_lists.combinations(*args) == expected
