@@ -8,7 +8,7 @@ from Homework_2.task1 import text_functions
  
 
 @pytest.mark.parametrize(
-    "file_name", "expected",
+    "file_name, expected",
     [
         [
             os.path.join(os.path.dirname(__file__), "test_1.txt"), 
