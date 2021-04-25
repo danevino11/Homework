@@ -16,5 +16,5 @@ from Homework_2.task5 import range_function
         ([string.ascii_lowercase, "p", "g", -2], ["p", "n", "l", "j", "h"]),
     ],
 )
-def test_custom_range(*args: List, expected: List[Any]):
-    assert range_function.custom_range(*args) == expected
+def test_custom_range(args: List, expected: List[Any]):
+    assert range_function.custom_range(args) == expected
