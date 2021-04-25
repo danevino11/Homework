@@ -15,4 +15,4 @@ from Homework_2.task5 import range_function
     ],
 )
 def test_custom_range(args: List, expected: List[Any]):
-    assert range_function.custom_range(args) == expected
+    assert range_function.custom_range(*args) == expected
