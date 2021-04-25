@@ -14,3 +14,19 @@ assert = custom_range(string.ascii_lowercase, 'g', 'p') == ['g', 'h', 'i', 'j', 
 assert = custom_range(string.ascii_lowercase, 'p', 'g', -2) == ['p', 'n', 'l', 'j', 'h']
 
 """
+
+
+def custom_range(sequence, start=None, finish=None, step=1):
+    first = None
+    last = None
+    values = []
+    num = 0
+    for i in sequence:
+        if i == start:
+            first = num
+        if i == finish:
+            last = num
+        values.append(i)
+        num += 1
+    values = values[first:last:step]
+    return values
