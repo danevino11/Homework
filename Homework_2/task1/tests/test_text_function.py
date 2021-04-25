@@ -32,7 +32,7 @@ def test_get_longest_diverse_words(file_name: str, expected: List[str]):
     
     
 @pytest.mark.parametrize(
-    "file_name", "expected",
+    "file_name, expected",
     [
         [os.path.join(os.path.dirname(__file__), "test_2.txt"), "Y"],
         
@@ -44,7 +44,7 @@ def test_get_rarest_char(file_name: str, expected: str):
     
     
 @pytest.mark.parametrize(
-    "file_name", "expected",
+    "file_name, expected",
     [
         [os.path.join(os.path.dirname(__file__), "test_3.txt"), 53],
         
@@ -56,7 +56,7 @@ def test_count_punctuation_chars(file_name: str, expected: int):
     
     
 @pytest.mark.parametrize(
-    "file_name", "expected",
+    "file_name, expected",
     [
         [os.path.join(os.path.dirname(__file__), "test_4.txt"), 6],
         
@@ -68,7 +68,7 @@ def test_count_non_ascii_chars(file_name: str, expected: int):
     
     
 @pytest.mark.parametrize(
-    "file_name", "expected",
+    "file_name, expected",
     [
         [os.path.join(os.path.dirname(__file__), "test_5.txt"), "П"],
         
