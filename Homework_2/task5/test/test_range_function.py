@@ -6,12 +6,12 @@ from Homework_2.task5 import range_function
 
 
 @pytest.mark.parametrize(
-    ["args", "expected"],
+    ["args", "expected_result"],
     [
-        ([string.ascii_lowercase, "f"], ["a", "b", "c", "d", "e"]),
+        ([string.ascii_lowercase, "g"], ["a", "b", "c", "d", "e", "f"]),
         (
-            [string.ascii_lowercase, "f", "o"],
-            ["f", "g", "h", "i", "j", "k", "l", "m", "n"],
+            [string.ascii_lowercase, "g", "p"],
+            ["g", "h", "i", "j", "k", "l", "m", "n", "o"],
         ),
         ([string.ascii_lowercase, "p", "g", -2], ["p", "n", "l", "j", "h"]),
     ],
