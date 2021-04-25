@@ -4,7 +4,7 @@ import pytest
 
 from Homework_2.task2 import major_and_minor
 
-
+ 
 @pytest.mark.parametrize(
     ["values", "expected"], 
     [[4, 5, 3, 5, 5, 5, 9, 5, 5, 5, 1, 2), (5, 4)]
