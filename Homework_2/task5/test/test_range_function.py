@@ -6,7 +6,7 @@ from Homework_2.task5 import range_function
 
 
 @pytest.mark.parametrize(
-    ["args", "expected"],
+    ["*args", "expected"],
     [
         (
             [string.ascii_lowercase, "g", "p", 1],
