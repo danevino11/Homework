@@ -6,7 +6,7 @@ from Homework_2.task3 import all_possible_lists
 
  
 @pytest.mark.parametrize(
-    ["args", "expected"], 
+    ["args, expected"], 
     [
         (
             [[2, 4], [4, 1], [9, 3]],
