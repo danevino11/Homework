@@ -21,5 +21,14 @@ assert val_1 is val_2
 from typing import Callable
 
 
-def cache(func: Callable) -> Callable:
-    ...
+def cache(fun: Callable) -> Callable:
+    cache_dict = dict()
+
+    def cache_func(*args):
+        if args in cache_dict:
+            return cache_dict[args]
+        result = fun(*args)
+        cache_dict[args] = result
+        return result
+
+    return cache_func
