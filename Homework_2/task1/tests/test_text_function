@@ -1,6 +1,6 @@
 from typing import List
 
-import pytest
+import pytest  
 
 from Homework_2.task1 import (
     get_longest_diverse_words,
