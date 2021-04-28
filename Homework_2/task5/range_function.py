@@ -26,6 +26,7 @@ def custom_range(sequence, start=None, finish=None, step=1):
             first = num
         if i == finish:
             last = num
+            break
         values.append(i)
         num += 1
     values = values[first:last:step]
