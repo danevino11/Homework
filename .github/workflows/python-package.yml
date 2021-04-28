@@ -3,11 +3,9 @@
 
 name: Python package
 
-on:
-  push:
-    branches: [ main, HW_2 ]
-  pull_request:
-    branches: [ main, HW_2 ]
+
+on: [push, pull_request]
+
 
 jobs:
   build:
