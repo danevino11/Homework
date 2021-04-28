@@ -19,8 +19,5 @@ import itertools
 from typing import Any, List
 
 
-def combinations(*args: List[Any]) -> List[List]:
-    possible_lists = []
-    for i in itertools.product(*args):
-        possible_lists.append(list(i))
-    return possible_lists
+def combinations(*args: List[Any]) -> List[List]:  
+    return list(product(*args))
