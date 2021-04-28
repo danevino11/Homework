@@ -29,5 +29,5 @@ def major_and_minor_elem(inp: List) -> Tuple[int, int]:
             values[i] += 1
     major = max(values, key=values.get)
     minor = min(values, key=values.get)
-    if values[major] > (len(inp) / 2) and major > minor:
+    if values[major] > (len(inp) / 2):
         return major, minor
