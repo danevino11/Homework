@@ -25,8 +25,9 @@ def make_filter(**keywords):
     """
     filter_funcs = []
     for key, value in keywords.items():
-        def keyword_filter_func(value):
-            return value[key] == value
+        def keyword_filter_func(data, k=key, v=value):
+            if k in data:
+                return data[k] == v
         filter_funcs.append(keyword_filter_func)
     return Filter(filter_funcs)
 
