@@ -23,3 +23,25 @@ Example::
     >>> f()
     ? 2
     '2'
+
+
+def cache_func(times: int):
+    cache_dict_2 = {}
+
+    def wrapper(func):
+        def inside(*args):
+            if args not in cache_dict_2:
+                val = func(*args)
+                cache_dict_2[args] = [val, 0]
+                return cache_dict_2[args][0]
+            elif cache_dict_2[args][1] < times:
+                cache_dict_2[args][1] += 1
+                return cache_dict_2[args][0]
+            else:
+                val = func(*args)
+                cache_dict_2[args] = [val, 0]
+                return val
+
+        return inside
+
+    return wrapper
