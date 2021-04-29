@@ -1,3 +1,4 @@
+"""
 In previous homework task 4, you wrote a cache function that remembers other function output value.
 Modify it to be a parametrized decorator, so that the following code::
 
@@ -23,7 +24,7 @@ Example::
     >>> f()
     ? 2
     '2'
-
+"""
 
 def cache_func(times: int):
     cache_dict_2 = {}
