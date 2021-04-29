@@ -19,5 +19,5 @@ def fast_calculate(func, nums):
 
 if __name__ == "__main__":
     nums = [i for i in range(501)]
-    print(fast(slow_calculate, nums))
+    print(fast_calculate(slow_calculate, nums))
     
