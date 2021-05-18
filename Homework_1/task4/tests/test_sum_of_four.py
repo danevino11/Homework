@@ -13,7 +13,7 @@ from Homework_1.task4 import sum_of_four
     ([0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], 81) 
     ]  
 )
-def test_fibonacci(test_input: a: List[int], b: List[int], c: List[int], d: List[int], expected: int):
+def test_fibonacci(a: List[int], b: List[int], c: List[int], d: List[int], expected: int):
     actual = sum_of_four.check_sum_of_four(test_input)
 
     assert actual == expected
