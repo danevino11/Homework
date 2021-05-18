@@ -1,7 +1,7 @@
 import pytest
 
 from Homework_3.task4 import armstrong
-
+ 
 @pytest.mark.parametrize(
     ["number", "expected"],
     [
