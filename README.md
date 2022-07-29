@@ -8,7 +8,7 @@
 * [Requirements](#requirements)
 
 ## General info
-This repo is created for homeworks EPAM Python Development Course Spring 2021
+
 
 ## All the homeworks
   [Homework 1](https://github.com/danevino11/Homework_EPAM/tree/main/Homework_1)
