@@ -1,4 +1,4 @@
-# Homework_EPAM
+# Homework
 <img src="https://www.python.org/static/community_logos/python-powered-w-200x80.png" alt="120px" width="300px"/>
 
 ## Table of contents
